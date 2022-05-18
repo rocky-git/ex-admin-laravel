@@ -1,0 +1,36 @@
+{
+    "name": "rockys/ex-admin-laravel",
+    "description": "Ex-admin-laravel 是一个基于Ant Design of Vue + Laravel 开发而成后台系统构建工具，无需关注页面模板JavaScript，只用php代码即可快速构建出一个功能完善的后台系统。",
+    "license": "Apache-2.0",
+    "keywords": [
+        "Ex-admin",
+        "ExAdmin",
+        "php",
+        "laravel",
+        "admin",
+        "CURD",
+        "ui"
+    ],
+    "authors": [
+        {
+            "name": "rocky",
+            "email": "631670747@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "rockys/ex-admin-ui": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExAdmin\\laravel\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ExAdmin\\laravel\\AdminServiceProvider"
+            ]
+        }
+    }
+}
