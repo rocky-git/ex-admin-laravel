@@ -13,7 +13,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'admin:install {--force : force install}';
+    protected $signature = 'admin:install {version?} {--force : force install}';
 
     /**
      * The console command description.
@@ -39,14 +39,13 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        
         $this->call('vendor:publish', [
             '--force' => $this->option('force'),
             '--tag' => [
                 'ex-admin-ui',
             ]
         ]);
-        $path = plugin()->download('laravel');
+        $path = plugin()->download('laravel',$this->input->getArgument('version'));
         if ($path === false) {
             $this->output->warning('下载插件失败');
             return 0;
