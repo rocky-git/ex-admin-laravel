@@ -5,6 +5,7 @@ namespace ExAdmin\laravel\Console;
 use Database\Seeders\AdminSeeder;
 use Illuminate\Console\Command;
 
+
 class InstallCommand extends Command
 {
     /**
@@ -38,6 +39,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        
         $this->call('vendor:publish', [
             '--force' => $this->option('force'),
             '--tag' => [

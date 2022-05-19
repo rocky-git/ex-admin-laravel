@@ -4,6 +4,7 @@ namespace ExAdmin\laravel;
 
 use App\Admin\Controllers\AdminController;
 use ExAdmin\laravel\Console\InstallCommand;
+use ExAdmin\laravel\Console\PluginComposerCommand;
 use ExAdmin\laravel\Middleware\LoadLangPack;
 use ExAdmin\laravel\Middleware\Permission;
 use ExAdmin\ui\support\Container;
@@ -41,7 +42,8 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . '/../../ex-admin-ui/resources' => public_path('ex-admin')], 'ex-admin-ui');
         
         $this->commands([
-            InstallCommand::class
+            InstallCommand::class,
+            PluginComposerCommand::class
         ]);
     }
 }
