@@ -50,7 +50,7 @@ class InstallCommand extends Command
             $this->output->warning('下载插件失败');
             return 0;
         }
-        $result = plugin()->install($path);
+        $result = plugin()->install($path,$this->option('force'));
         if ($result !== true) {
             $this->output->warning($result);
             return 0;
