@@ -58,6 +58,7 @@ class InstallCommand extends Command
         unlink($path);
         plugin()->buildIde();
         plugin()->laravel->install();
+        $this->call('plugin:composer',['laravel']);
         $this->output->success('install success');
         return 0;
     }
