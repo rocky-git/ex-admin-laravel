@@ -28,8 +28,23 @@ class AdminServiceProvider extends ServiceProvider
     {
 
         Container::getInstance()->plugin->register();
+        $this->updateVersion();
+        
     }
-   
+    protected function updateVersion(){
+        $file = public_path('ex-admin').DIRECTORY_SEPARATOR.'version';
+        $update = false;
+        if(!is_file($file)){
+            $update = true;
+        }
+        if(!$update && file_get_contents($file) != ex_admin_version()){
+            $update = true;
+        }
+        if($update){
+            app(\Illuminate\Contracts\Console\Kernel::class)->call('vendor:publish',['--force'=>true,'--tag'=>['ex-admin-ui']]);
+            file_put_contents($file,ex_admin_version());
+        }
+    }
     /**
      * Register the application services.
      *

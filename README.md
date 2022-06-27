@@ -31,8 +31,6 @@
 ### 安装
 首先需要安装 laravel 框架，如已安装可以跳过此步骤。如果您是第一次使用 laravel，请务必先阅读文档 <a href="https://learnku.com/docs/laravel/8.5/installation/10359" target="_blank">安装《Laravel 8 中文文档》</a> ！
 ```
-composer create-project laravel/laravel 项目名称 ^8
-# 或
 composer create-project laravel/laravel 项目名称
 ```
 
@@ -68,18 +66,8 @@ php artisan admin:install
 
 
 ### Apache
-```
-<IfModule mod_rewrite.c>
-  Options +FollowSymlinks -Multiviews
-  RewriteEngine On
 
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
-</IfModule>
-```
-
-另外apache默认是没有开启Authorization请求头的，需要在 `httpd.conf` 配置以下规则
+apache默认是没有开启Authorization请求头的，需要在 `httpd.conf` 配置以下规则
 
 
 ```dotenv
@@ -95,10 +83,7 @@ php artisan admin:install
 ### Nginx
 ```
 location / {
-   if (!-e $request_filename) {
-       rewrite  ^(.*)$  /index.php?s=/$1  last;
-       break;
-   }
+    try_files $uri $uri/ /index.php?$query_string;
 }
 ```
 
@@ -106,7 +91,6 @@ location / {
 `Ex-Admin` 基于以下组件:
 
 + [ThinkPhP](http://www.thinkphp.cn/)
-+ [Element Plus](https://element-plus.gitee.io/)
 + [Ant Design Vue](https://www.antdv.com)
 + [Vue3](https://cn.vuejs.org/)
 + [font-awesome](http://fontawesome.io)
