@@ -9,7 +9,8 @@
 - [Demo / 在线演示](https://demo.ex-admin.com)
 - [github](https://github.com/rocky-git/ex-admin-laravel)
 - [gitee(码云)](https://gitee.com/rocky-git/ex-admin-laravel)
-
+- [ex-admin-ui(github)](https://github.com/rocky-git/ex-admin-ui)
+- [ex-admin-ui(码云)](https://gitee.com/rocky-git/ex-admin-ui)
 
 
 
