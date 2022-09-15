@@ -4,6 +4,8 @@ namespace ExAdmin\laravel\Console;
 
 use Database\Seeders\AdminSeeder;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 class InstallCommand extends Command
@@ -13,7 +15,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'admin:install {--versions= : version number} {--force : force install}';
+    protected $signature = 'admin:install {--versions= : version number} {--force : force install} {--username= : username} {--password= : password}';
 
     /**
      * The console command description.
@@ -58,6 +60,15 @@ class InstallCommand extends Command
         unlink($path);
         plugin()->buildIde();
         plugin()->laravel->install();
+        $username = $this->option('username');
+        $password = $this->option('password');
+        if($username && $password){
+            DB::table(plugin()->laravel->config('database.user_table'))
+                ->update([
+                   'username'=>$username,
+                   'password'=>Hash::make($password),
+                ]);
+        }
         $this->call('plugin:composer',['laravel']);
         $this->output->success('install success');
         return 0;
