@@ -32,7 +32,7 @@ class AdminServiceProvider extends ServiceProvider
         
     }
     protected function updateVersion(){
-        $file = public_path('ex-admin').DIRECTORY_SEPARATOR.'version';
+        $file = public_path('exadmin').DIRECTORY_SEPARATOR.'version';
         $update = false;
         if(!is_file($file)){
             $update = true;
@@ -54,7 +54,7 @@ class AdminServiceProvider extends ServiceProvider
     {
         
         //前端ui
-        $this->publishes([__DIR__ . '/../../ex-admin-ui/resources' => public_path('ex-admin')], 'ex-admin-ui');
+        $this->publishes([__DIR__ . '/../../ex-admin-ui/resources' => public_path('exadmin')], 'ex-admin-ui');
         
         $this->commands([
             InstallCommand::class,
