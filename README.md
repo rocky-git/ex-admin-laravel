@@ -4,18 +4,30 @@
 <br>
 <p><code>Ex-Admin</code>是一个基于<a href="https://www.antdv.com/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a>开发而成后台系统构建工具，无需关注页面模板JavaScript，只用php代码即可快速构建出一个功能完善的后台系统。。</p>
 
+![](https://www.ex-admin.com/img/1655645000903.png)
+
 
 - [中文文档](https://www.ex-admin.com/doc)
 - [Demo / 在线演示](https://demo.ex-admin.com)
-- [github](https://github.com/rocky-git/ex-admin-laravel)
-- [gitee(码云)](https://gitee.com/rocky-git/ex-admin-laravel)
 - [ex-admin-ui(github)](https://github.com/rocky-git/ex-admin-ui)
 - [ex-admin-ui(码云)](https://gitee.com/rocky-git/ex-admin-ui)
+- [官方交流群](https://jq.qq.com/?_wv=1027&k=ueqB1sVD)
 
+#### thinkphp版本
+- [github](https://github.com/rocky-git/ex-admin-thinkphp)
+- [gitee](https://gitee.com/rocky-git/ex-admin-thinkphp)
 
+#### laravel版本
+- [github](https://github.com/rocky-git/ex-admin-laravel)
+- [gitee](https://gitee.com/rocky-git/ex-admin-laravel)
 
-![](https://www.ex-admin.com/img/1655645000903.png)
+#### hyperf版本
+- [github](https://github.com/rocky-git/ex-admin-hyperf)
+- [gitee](https://gitee.com/rocky-git/ex-admin-hyperf)
 
+#### webman版本
+- [github](https://github.com/rocky-git/ex-admin-webman)
+- [gitee](https://gitee.com/rocky-git/ex-admin-webman)
 
 
 
@@ -91,7 +103,6 @@ location / {
 ### 鸣谢
 `Ex-Admin` 基于以下组件:
 
-+ [ThinkPhP](http://www.thinkphp.cn/)
 + [Ant Design Vue](https://www.antdv.com)
 + [Vue3](https://cn.vuejs.org/)
 + [font-awesome](http://fontawesome.io)
@@ -102,5 +113,19 @@ location / {
 
 
 ### License
+
 ------------
+
 Ex-Admin遵循Apache2开源协议发布，并提供免费使用
+
+### 交流QQ群 579150457
+
+![](https://www.ex-admin.com/storage/qq_team.png)
+
+### 捐赠
+
+<div>
+<img src="https://www.ex-admin.com/storage/files/fa5b3c66950b0bc92b96552dd8095ac7.jpeg" height="300">
+
+<img src="https://www.ex-admin.com/storage/files/82ace9b2aebc95aaa59610bfb5a620bf.jpeg" height="300">
+</div>
