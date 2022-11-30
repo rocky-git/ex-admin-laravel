@@ -29,7 +29,10 @@ class AdminServiceProvider extends ServiceProvider
 
         Container::getInstance()->plugin->register();
         $this->updateVersion();
-        
+        //依赖注入
+        \ExAdmin\ui\Route::setObjectParamAfter(function ($name){
+            return $this->app->make($name);
+        });
     }
     protected function updateVersion(){
         $file = public_path('exadmin').DIRECTORY_SEPARATOR.'version';
@@ -52,7 +55,7 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
+
         //前端ui
         $this->publishes([__DIR__ . '/../../ex-admin-ui/resources' => public_path('exadmin')], 'ex-admin-ui');
         
