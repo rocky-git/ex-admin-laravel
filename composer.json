@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": ">=7.3.0",
-        "rockys/ex-admin-ui": "^1"
+        "rockys/ex-admin-ui": "^2"
     },
     "autoload": {
         "psr-4": {
